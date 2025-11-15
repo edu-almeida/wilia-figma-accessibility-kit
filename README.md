@@ -7,7 +7,7 @@
 
 [![Figma](https://img.shields.io/badge/Acessar_o_Wilia_na_Comunidade_Figma-black?style=for-the-badge&logo=figma&logoColor=white&color=000000)](https://www.figma.com/community/file/1571609699997548870)
 
-![Capa do Wilia (Sugestão: coloque um print da capa do seu kit aqui)](images/Capa_Willia.jpg)
+![Capa do Wilia](images/00_capa_willia.jpg)
 
 ---
 
