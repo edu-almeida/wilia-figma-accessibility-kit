@@ -1,5 +1,8 @@
 # Wilia: Kit de Anotações de Acessibilidade para Web
 
+[![Comunidade Figma](https://img.shields.io/badge/Figma-Comunidade-blue?logo=figma)](https://www.figma.com/community/file/1571609699997548870)
+![Versão](https://img.shields.io/badge/version-v1.0.0-blue.svg)
+
 **Wilia (um acrônimo para *Web Accessility Annotation Kit*) é um UI Kit para Figma focado em especificações de acessibilidade para tecnologias assistivas.**
 
 [![Figma](https://img.shields.io/badge/Acessar_o_Wilia_na_Comunidade_Figma-black?style=for-the-badge&logo=figma&logoColor=white&color=000000)](https://www.figma.com/community/file/1571609699997548870)
@@ -22,6 +25,8 @@ A missão do kit é simples: **tornar a especificação de acessibilidade uma pa
 
 O kit oferece um conjunto de "etiquetas" e "notas" visuais que você pode usar para anotar seus designs. Com elas, você pode especificar:
 
+![Visao Geral dos componentes do kit wilia](images/02_visao_geral_dos_componentes_do_kit_wilia.jpg)
+
 * **Estrutura e Semântica:** A hierarquia de Cabeçalhos (`h1`-`h6`), as Regiões e *landmarks* da página (`header`, `main`, etc.).
 * **Interatividade:** A função de Botões, o destino de Hiperlinks e todos os detalhes de Campos de Entrada de formulários.
 * **Conteúdo:** O propósito de Imagens e seus textos alternativos.
@@ -31,6 +36,8 @@ O kit oferece um conjunto de "etiquetas" e "notas" visuais que você pode usar p
 ## Como Usar o Wilia (O Componente "Multiespecificação")
 
 O *Wilia* foi projetado para ser uma ferramenta de produtividade. Em vez de procurar por componentes individuais na biblioteca, você usará principalmente o componente **`Multiespecificação`**.
+
+![Willia multicomponente](images/willia_multicomponente.png)
 
 Este componente único agrupa todas as especificações em um só lugar, permitindo que você o configure rapidamente usando as *variants* do Figma.
 
@@ -69,13 +76,6 @@ A sabedoria do *Wilia* é construída sobre os padrões que guiam a web acessív
 * Mozilla (MDN Web Docs): Guias práticos de implementação de acessibilidade.
 * Movimento Web para Todos (MWPT): A principal iniciativa sobre o tema no Brasil.
 
-## Trabalhos Futuros
-
-A conclusão do TCC é apenas o começo. Os próximos passos planejados para a evolução do *Wilia* incluem:
-1.  **Validação Prática:** Realizar pesquisas de usabilidade com designers e desenvolvedores.
-2.  **Expansão:** Adicionar especificações para outras deficiências (motoras, cognitivas, etc.).
-3.  **Internacionalização:** Traduzir o kit para outros idiomas.
-4.  **Evolução para Plugin:** Como um objetivo de longo prazo, desenvolver um *plugin* para o Figma que automatize parte do processo de documentação.
 
 ## Licença
 
