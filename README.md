@@ -56,9 +56,10 @@ Este repositório arquiva o **Trabalho de Conclusão de Curso (TCC)** que fundam
 
 Este repositório contém todo o material acadêmico relacionado ao projeto:
 
-* `/TCC_Wilia/`: Pasta contendo os arquivos-fonte do TCC (arquivos `.tex`, `.bib`, imagens) e a versão final em `.pdf`.
+* `/academico/`: Pasta contendo os arquivos-fonte do TCC (arquivos `.tex`, `.bib`, imagens) e a versão final em `.pdf`.
 * `README.md`: Este arquivo de apresentação.
 * `LICENSE`: A licença do projeto.
+* `/images/`: Pasta contendo imagens do Willia.
 
 ## Mentores do Projeto (Referências)
 
