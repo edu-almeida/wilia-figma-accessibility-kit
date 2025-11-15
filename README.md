@@ -52,7 +52,7 @@ Este componente único agrupa todas as especificações em um só lugar, permiti
 
 ## Contexto Acadêmico
 
-Este repositório arquiva o **Trabalho de Conclusão de Curso (TCC)** que fundamentou a criação do *Wilia*. O projeto foi desenvolvido para o curso de [Bacharelado em Sistemas de Informação] do **Instituto Federal do Norte de Minas Gerais (IFNMG)**.
+Este repositório arquiva o **Trabalho de Conclusão de Curso (TCC)** que fundamentou a criação do *Wilia*. O projeto foi desenvolvido para o curso de **Bacharelado em Sistemas de Informação** do **Instituto Federal do Norte de Minas Gerais (IFNMG)**.
 
 * **Autor:** Eduardo Pereira de Almeida
 * **Orientador:** Prof. Arthur Faria Porto
