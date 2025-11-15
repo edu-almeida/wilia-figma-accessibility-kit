@@ -1,0 +1,99 @@
+\chapter{Metodologia} 
+\label{cap3_metodologia} 
+
+
+
+O presente capítulo descreve o percurso metodológico empregue na conceção, desenvolvimento e estruturação do Wilia, um kit de anotação de acessibilidade para a ferramenta Figma. A pesquisa classifica-se como Aplicada, por se focar na criação de um artefacto destinado à solução de um problema prático no fluxo de trabalho de produtos digitais. A abordagem utilizada foi Qualitativa, centrada na análise de diretrizes, na construção de um kit de componentes de documentação e na produção de conteúdo técnico de apoio. O processo foi segmentado em quatro fases sequenciais.
+
+
+
+\section{Fundamentação Teórica e Delimitação do Escopo de Atuação}
+
+O ponto de partida da investigação foi a identificação de uma lacuna comunicacional e ferramental entre as disciplinas de design e desenvolvimento no que tange à especificação de requisitos de acessibilidade. Para contextualizar a relevância deste problema no cenário brasileiro, a etapa inicial incluiu a análise de pesquisas e relatórios de organizações nacionais proeminentes na área. Foram consultados os levantamentos periódicos realizados pelo \citeonline{mwpt_2024} (Movimento Web para Todos) em parceria com a BigData Corp, bem como a pesquisa “Panorama da Acessibilidade Digital no Brasil”, publicada pela \citeonline{handtalk2023}. Ambos os estudos serviram para evidenciar a dimensão e a persistência das barreiras digitais no ecossistema web nacional, reforçando a relevância e a urgência do problema abordado por este trabalho.
+
+Esta análise de cenário nacional, somada ao estudo das fontes normativas globais, compôs o embasamento teórico do projeto. A investigação aprofundada foi direcionada por três pilares:
+\begin{enumerate}
+\item 
+As Diretrizes de Acessibilidade para Conteúdo Web (WCAG), do World Wide Web Consortium (W3C), que serviram como a base normativa para todos os critérios técnicos.
+\item 
+Os relatórios anuais da WebAIM (Web Accessibility in Mind), cuja análise dos erros mais comuns na web permitiu um diagnóstico preciso dos pontos de maior fragilidade em interfaces digitais.
+\item 
+A documentação técnica do MDN Web Docs (Mozilla) e as práticas de autoria do WAI-ARIA (W3C), que forneceram os subsídios para os exemplos de implementação e a tradução das diretrizes em código prático.
+\end{enumerate}
+
+A síntese deste levantamento resultou na delimitação do escopo do artefato. Foram selecionados para compor o kit os componentes de anotação que correspondem às áreas de maior incidência de falhas de acessibilidade, a saber: Regiões (Landmarks), Cabeçalhos, Botões, Campos de Entrada, Imagens, Hiperlinks, Ordem de Leitura, Ordem de Foco, Anotação Geral e a instrução para Ignorar elementos decorativos.
+
+
+
+\section{Análise Comparativa de Artefatos e Modelagem Estratégica}
+
+Uma vez definido o escopo, a segunda fase concentrou-se na análise de soluções correlatas por meio de um processo de benchmarking conduzido diretamente na plataforma Figma Community, sendo a biblioteca de conteúdos da comunidade. A pesquisa foi realizada utilizando termos como “acessibility”, “a11y”, “Acessibilidade” e “Acessibility kit”, o que levou à seleção de artefatos de alto impacto e ampla utilização pela comunidade de design, estabelecendo-os como referências para análise. 
+
+A seleção teve como critérios o quão bem ranqueados os artefatos estavam nos resultados da busca, o número de duplicações, que remete ao número de usuários que utilizam ou utilizaram o artefato, o número de marcações como “gostei” que é uma métrica de dizer se quem o usou gostou ou não e, principalmente, se o artefato abrangia o material de estudo dessa pesquisa que trata sobre leitores de tela e sistemas e sites web. Visto isso, foram selecionados os artefatos previamente citados:
+
+\begin{itemize}
+  \item \textbf{A11y Annotation Kit}: Com uma Utilização pela comunidade de mais de 14900 suários e marcado como gostei por mais de 1100 usuários.
+  \item \textbf{Web Accessibility Annotation Kit}: Com uma Utilização pela comunidade de mais de 9800 suários e marcado como gostei por mais de 1000 usuários.
+  \item \textbf{Intopia's Accessibility Annotation Kit}: Com uma Utilização pela comunidade de mais de 2000 suários e marcado como gostei por mais de 135 usuários.
+  \item \textbf{Pencil A11Y Kit}: Com uma Utilização pela comunidade de mais de 1200 suários e marcado como gostei por mais de 80 usuários.
+\end{itemize}
+
+
+\section{Concepção do Kit no Figma}
+
+Esse último ponto consistiu na construção efetiva do projeto Wilia no Figma, concebido como uma solução de design final para documentação. A construção seguiu uma sequência rigorosa de etapas processuais: primeiramente, a definição da arquitetura visual e nomenclatura do kit; em seguida, a construção da base de componentes fundamentais; posteriormente, a estruturação destes elementos em anotações complexas; na sequência, o desenvolvimento técnico do “Multicomponente” centralizador; e, por fim, a curadoria e integração do conteúdo educacional na ferramenta.
+
+O primeiro passo foi projetar a identidade visual do próprio kit de anotação, definindo a Arquitetura Visual e Nomenclatura. Foi desenvolvida uma paleta de cores, tipografia e iconografia distintas, para garantir que as anotações do Wilia fossem sempre legíveis e visualmente apartadas do design que estivessem documentando. Simultaneamente, foi estabelecida uma convenção de nomenclatura para todos os componentes e suas camadas, assegurando a escalabilidade e manutenibilidade do arquivo.
+
+A construção da base de componentes foi guiada por um princípio de componentização modular. Esta etapa iniciou-se pela criação dos elementos mais fundamentais e indivisíveis. Estes elementos-base, como a Etiqueta (o rótulo visual), o contêiner de Nota (a área de texto) e os Conectores (as linhas de ligação), foram criados como componentes mestres no Figma.
+
+Na etapa de estruturação das anotações, esses elementos-base foram então combinados para formar estruturas mais complexas e funcionais. O componente Nota, por exemplo, foi estruturado com a ferramenta Auto Layout do Figma para se adaptar dinamicamente ao conteúdo. Foram criados campos de texto específicos para “Título da anotação”, “Descrição da nota”, e “Código de exemplo”, conforme a anatomia do kit. Esta estruturação garantiu que cada anotação fosse um conjunto coeso e responsivo.
+
+O desenvolvimento do “Multicomponente” com Component Properties foi a solução técnica implementada para otimizar a usabilidade do kit, conforme planejado na estratégia. Sua implementação técnica no Figma envolveu a criação de um componente base contendo todas as possíveis anotações; a configuração de uma propriedade de variante chamada “Tipo de Anotação”, com opções para cada um dos dez tipos de especificação (Cabeçalho, Botão, Imagem, etc.); e o uso de propriedades de texto e booleanas (Component Properties) para permitir ao usuário final a edição de textos e a alternância da visibilidade de seções diretamente no painel de inspeção do Figma.
+
+Finalmente, a etapa de curadoria e integração do conteúdo educacional foi o que efetivamente transformou a coleção de elementos visuais em um sistema de conhecimento integrado. Com a estrutura técnica finalizada, foi realizado o processo de pesquisa, redação e integração do conteúdo de apoio. Para cada variante dentro do “Multicomponente”, o texto correspondente à sua documentação (Definição, Impacto no Usuário, Diret
+
+
+
+
+
+\begin{comment}
+\section{ Arquitetura da Informação e Construção do kit}
+
+A fase final do projeto foi dedicada à produção do conteúdo educacional que acompanha cada componente, transformando o artefato de uma ferramenta para um recurso de consulta. Para cada um dos tipos de anotação, foi executado um procedimento sistemático de curadoria e redação, que resultou em um guia detalhado, padronizado com a seguinte estrutura:
+\begin{description}
+  \item[Definição e Impacto no Usuário:] 
+  Uma explanação do conceito e sua importância, frequentemente ilustrada por cenários de uso contrastantes ("Cenário Positivo" e "Cenário Negativo") para evidenciar o impacto na experiência de usuários de tecnologias assistivas.
+  \item[Diretrizes para Design e WCAG:]
+  Orientações práticas para a aplicação da anotação, sempre vinculadas aos critérios normativos correspondentes das Diretrizes de Acessibilidade para Conteúdo Web.
+  \item[Exemplos de Implementação:] 
+  Foram incluídos fragmentos de código (HTML e ARIA) e diretrizes técnicas para os desenvolvedores, sintetizados a partir das melhores práticas preconizadas pela W3C e MDN.
+\end{description}
+
+Todo este material textual foi meticulosamente inserido na documentação interna de cada componente no Figma, acessível através das páginas de cada componente, assegurando que a fundamentação teórica estivesse sempre a um clique de distância da prática de design. Para os profissionais de implementação, os exemplos e materiais de apoio para implementação foram inseridos diretamente na descrição de cada componente.
+\end{comment}
+
+\begin{comment}
+{\color{red}
+Seção Antiga
+
+A primeira fase do projeto se deu pela definição de escopo, em que o ponto de pesquisa inicial foi o estudo aprofundado das Diretrizes de Acessibilidade para Conteúdo Web (WCAG 2.2), com foco no nível AA, além dos princípios da ARIA (\textit{Accessible Rich Internet Applications}). Esse embasamento técnico serviu como guia para compreender os critérios essenciais de acessibilidade que deveriam ser atendidos no kit. Além disso, analisou-se os principais erros recorrentes em acessibilidade apontados pela WebAIM, com ênfase em contextos semânticos, estrutura de sites e más práticas recorrentes. Essa análise permitiu identificar os componentes mais problemáticos em interfaces digitais, como: botões, cabeçalhos, imagens e campos de entrada, e com isso definir o escopo inicial do kit.
+
+Também foram consultados kits de acessibilidade já existentes, observando boas práticas de documentação e apresentação, e esse processo auxiliou na modelagem de uma proposta mais clara, educativa e funcional, tanto para designers quanto para desenvolvedores.
+
+Em seguida, a fase de prototipação foi conduzida no Figma, com uma abordagem centrada no Atomic Design, onde os componentes foram divididos em átomos (elementos simples como botões), moléculas e organismos (combinações mais complexas de elementos), permitindo uma estrutura escalável e de fácil entendimento. O grande diferencial deste projeto está na metodologia voltada não apenas à acessibilidade em si, mas também no suporte direto à atuação do designer e do desenvolvedor, visto que o kit foi pensado para ser versátil dentro do próprio Figma, oferecendo componentes que geram múltiplas variantes com facilidade. Também foram criados os chamados multicomponentes, que nada mais são que elementos que funcionam como \textit{containers} de todos os componentes relacionados, permitindo que o usuário copie apenas um deles e faça sua adaptação, modificação ou troca de suas partes diretamente, conforme a necessidade, sendo que cada variante possui sua própria documentação de apoio técnico para desenvolvedores.
+
+O próximo passo foi a organização do kit, em que o mesmo foi dividido em diferentes seções dentro do Figma, sendo:
+   \begin{itemize}
+    \item \textbf{Página de Introdução:} Apresenta a proposta da \textit{Wilia} (nome dado ao kit), explicando seu objetivo e a importância da acessibilidade no design digital;
+
+    \item \textbf{Página de \textit{Overview}:} Reúne todos os componentes em um só lugar para facilitar a visualização geral do kit;
+
+    \item \textbf{Páginas Individuais por Componente:} Cada componente possui uma página própria onde estão organizadas as "etiquetas" de acessibilidade, ou seja, anotações visuais que indicam como aplicar as boas práticas de forma correta.
+
+    \item \textbf{Especificações Visuais:} Também foram incluídas páginas com as estruturas visuais do kit, como paleta de cores, tipografia e ícones.
+\end{itemize}
+
+Finalmente, cada componente e variante conta com uma documentação específica, seguindo um modelo padronizado que inclui a descrição do comportamento acessível esperado, uma explicação sobre a leitura feita por leitores de tela e outras tecnologias assistivas, orientações práticas para designers e desenvolvedores, exemplos de marcação HTML semântica, e quando necessário, alternativas com ARIA, identificação da diretriz específica da WCAG a que o componente atende, e por fim, um guia explicativo sobre como aplicar as etiquetas corretamente e obter o máximo valor do kit. Além disso, para facilitar o uso técnico, o Figma foi estruturado de forma que, ao selecionar um componente, o desenvolvedor tenha acesso imediato ao texto de apoio na aba lateral, explicando suas funcionalidades e instruções de uso.
+}
+\end{comment}

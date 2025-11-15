@@ -1,0 +1,519 @@
+\chapter{Revisão da Literatura} 
+\label{cap2_revisao} 
+
+A revisão da literatura aborda os tópicos em que esse trabalho está baseado, como acessibilidade na web e exclusão digital, bem como as legislações e normalizações pertinentes ao tópico.
+
+%leitores de tela e a forma como eles fazem a interpretação das interfaces, diretrizes e padrões como WCAG, WAI-ARIA, design de interfaces e documentação no Figma e por fim, o valor de kits e anotações visuais para acessibilidade.
+
+\section{Acessibilidade na web e exclusão digital}
+
+Nos últimos anos, muito se tem discutido sobre inclusão digital (\cite{nttdata}, \cite{webaim_survey_2023}, \cite{abnt17225}), mas ainda são poucas as iniciativas que realmente se preocupam com a experiência de quem enfrenta dificuldades para acessar o conteúdo online. A acessibilidade digital, nesse contexto, deixou de ser um detalhe técnico e passou a ser parte essencial de um debate mais amplo sobre direitos e igualdade. Conforme \cite{filgueiras2024inclusao}, a cidadania no século XXI exige, entre outras coisas, a possibilidade de se conectar, interagir e usufruir das plataformas digitais de maneira autônoma e segura. No entanto, para uma parcela significativa da população, como por exemplo pessoas com deficiência visual, o uso da internet continua com diversas barreiras e dificuldades \cite{nttdata}. Isso mostra que, embora muitos serviços tenham migrado para o meio digital, nem todos puderam acompanhar esse movimento em condições de igualdade, tornando a exclusão digital uma realidade marcante  para pessoas com deficiência e revelando um cenário desafiador em relação à acessibilidade na web.
+
+%Um exemplo disso pode ser visualizado na pesquisa \citeonline{cetic2024ti2c}, realizada pelo Centro Regional de Estudos para o Desenvolvimento da Sociedade da Informação (Cetic.br), que mostra que em 2023, 156 milhões de pessoas se conectaram à internet no Brasil. Por outro lado, existe uma variação expressiva entre a conectividade conforme a renda, em que o acesso à internet entre as classes D e E chega a cerca de 60\%, e entre as pessoas que recebem menos de 1 salário mínimo chega a 24\%, com a conexão compartilhada entre vizinhos, por exemplo (Centro Regional de Estudos para o Desenvolvimento da Sociedade da Informação, Cetic.br).
+
+%Com relação as pessoas com algum tipo de deficiência, a \cite{oms_2021} cita que cerca de 16\% da população mundial vive com algum tipo de deficiência, o que corresponde a cerca de 1,3 bilhão de pessoas.
+Segundo dados do Instituto Brasileiro de Geografia e Estatística \citeonline{ibge_2022}, existem mais de 6,5 milhões de pessoas com deficiência visual no Brasil, sendo 500 mil cegas e cerca de 6 milhões com baixa visão. Esses dados demonstram a importância de considerar a acessibilidade digital como uma questão de política pública e de direitos humanos.
+
+Entretanto, o cenário atual parece não levar esses dados em consideração, conforme relatório \citeonline{webaim_survey_2023}, que avaliou a acessibilidade de um milhão de páginas da web e concluiu que 96,3\% delas apresentavam falhas básicas no atendimento das diretrizes WCAG 2.1 (\textit{Web Content Accessibility Guidelines}) . %Entre os principais erros pode-se citar a ausência de texto alternativo em imagens (tag alt), baixo contraste entre texto e fundo e a falta de etiquetas em formulários (tag label). Elementos que são básicos e que comprometem a experiência de navegação de usuários com deficiência, principalmente os que utilizam leitores de tela.
+
+No Brasil, um estudo feito em 2024 pela BigDataCorp em parceria com o Movimento Web para Todos (MWPT) analisou mais de 21 milhões de sites brasileiros e revelou que menos de 3\% cumpriam de forma mínima os requisitos de acessibilidade digital, conforme \cite{freire2024}. %No setor público, esse descumprimento é ainda maior, onde 89,46\% dos sites governamentais possuem problemas que comprometem o uso por pessoas com deficiência, aumentando à exclusão não somente por quem não tem acesso a internet, mas também por pessoas com algum nível de deficiência.
+
+Outra pesquisa sobre o tema foi realizada pelo de \citeonline{nttdata} demonstra que a maior deficiência pelos respondentes da pesquisa é a cegueira, e com isso também indica que, entre os sites inacessíveis para pessoas com deficiência, os elementos mais encontrados nos sites são: 
+\begin{itemize}
+    \item Imagens CAPTCHA apresentando texto usado para verificar que você não é um robô;
+    \item Imagens sem descrição ou com descrições inadequadas;
+    \item Campo de busca inacessível ou inexistente;
+    \item Formulários complexos;
+    \item Links ou botões que não fazem sentido;
+    \item Telas ou partes de telas que mudam inesperadamente;
+    \item Falta de cabeçalhos;
+    \item Falta de links “ir para conteúdo” ou “ir para o menu”;
+    \item Muitos elementos focados com Tab na mesma página e tabelas complexas.
+\end{itemize}
+
+Todos esses itens demonstram, que, de certa forma, que muitos sites são criados muitas vezes visando sua identidade visual, e não na acessibilidade do mesmo, problemas esses que em geral, poderiam ser resolvidos pelas etiquetas Figma propostas no trabalho.
+
+Essa falta de acessibilidade impacta diretamente a qualidade de vida das pessoas com deficiência, pois conforme estudo realizado por \citeonline{webaim_survey_2023}, revelou-se que 71\% dos usuários com deficiência abandonam sites em que enfrentam dificuldades de acesso, o que não apenas restringe seu acesso a informação como também compromete sua participação no mercado de trabalho, na educação e no consumo. Em um contexto onde serviços básicos como agendamento médico, matrícula escolar, serviços bancários e pagamentos de impostos são feitos hoje em dia online, a exclusão digital representa uma forma moderna de segregação.
+
+\subsection{Legislação}
+Do ponto de vista legal, o Brasil possui legislação específica referente a acessibilidade digital na \citeonline{brasil2015}, ou seja, Lei Brasileira de Inclusão da Pessoa com Deficiência (Estatuto da Pessoa com Deficiência), que estabelece em seu artigo 63, que os sites mantidos por empresas com sede ou representação no país devem assegurar acessibilidade para pessoas com deficiência, em conformidade com os padrões estabelecidos para a web. Tem-se ainda o o Modelo de Acessibilidade em Governo Eletrônico (eMAG) que foi lançado em 2007, com alinhamento as diretrizes internacionais da W3C e que deveria ser adotado por todos os órgãos da administração pública federal \citeonline{emag}.
+
+O Marco Civil da Internet, através da Lei nº 12.965/2014, também estabelece direitos fundamentais relacionados ao acesso digital, embora não seja esse diretamente seu foco. Assim, em seu artigo 3 ele inclui o acesso universal à internet como princípio, o que pressupõe que o acesso seja possível para todos, o que incluindo pessoas com deficiência; em seu artigo 7 ele trata dos direitos dos usuários, destacando o direito à acessibilidade da informação, à neutralidade da rede e à inviolabilidade da privacidade, além de incentivar políticas públicas que promovam a inclusão digital, incluindo pessoas com deficiência \cite{marcoCivil}.
+
+Outra legislação brasileira que promove a acessibilidade na web é a \citeonline{abnt17225}, uma norma brasileira publicada pela Associação Brasileira de Normas Técnicas (ABNT) que trata especificamente da acessibilidade na internet. Ela foi criada para estabelecer diretrizes e critérios técnicos com o objetivo de garantir que websites, portais, sistemas e conteúdos digitais sejam acessíveis a todas as pessoas, incluindo aquelas com deficiência. Como norte a mesma tem a base fundamentada nas WCAG 2.1, adaptadas para o contexto brasileiro, e aplica-se a portais públicos e privados, aplicativos móveis, plataformas educacionais, e-commerces, entre outros. Além disso, a mesma aborda elementos como o texto alternativo para imagens, navegação via teclado, contraste de cores, fontes legíveis, uso de leitores de tela para navegação e formulários acessíveis \citeonline{wcag_22_2023}.
+
+
+\section{Diretrizes e Padrões}
+A acessibilidade na web é fundamentada em diretrizes técnicas desenvolvidas por organizações internacionais, especialmente pelo W3C (\textit{World Wide Web Consortium}. Entre essas, destacam-se as \textit{Web Content Accessibility Guidelines} (WCAG) e as especificações do \textit{Accessible Rich Internet Applications} (WAI-ARIA), ambas desenvolvidas pelo grupo \textit{Web Accessibility Initiative} (WAI).
+
+\subsection{WCAG}
+Já no cenário internacional, as WCAG vêm sendo atualizadas de forma regular para englobar novos desafios, por exemplo, em sua versão 2.1 atualizada em Maio de 2025, adicionou-se critérios voltados a dispositivos móveis e à acessibilidade cognitiva \citeonline{wcag_22_2023}. Apesar disso e da boa intenção dessas técnicas, a aplicação prática de fato dessas diretrizes ainda é limitada pela falta e pela dificuldade de fiscalização, desconhecimento técnico por parte dos desenvolvedores, pressão para desenvolvimento dos produtos de forma rápida, o que faz muitas vezes com que princípios básicos de acessibilidade sejam ignorados e ausência de políticas de capacitação.
+
+As WCAG têm como objetivo tornar o conteúdo web mais acessível para pessoas com deficiências, incluindo deficiências visuais, auditivas, motoras e cognitivas. Atualmente ela esta na versão 2.2 (2023) e sua evolução histórica pode ser visualizada na Figura \ref{img_historico}.
+
+\begin{figure}[H] 
+    \centering
+    \caption{Evolução histórica do WCAG.}
+    \includegraphics[width=1.0\textwidth]{Figuras/historico.PNG}
+    \label{img_historico}
+    \caption{Fonte: \cite{articleHistorico}}
+  \end{figure}
+
+Conforme \cite{articleHistorico}, cada nova versão tem um foco e uma evolução da anterior, sendo que a versão 1.1 de 1999 tinha como objetivo as recomendações técnicas, porém era pouco flexível, o que trazia dificuldades na sua aplicação a novos formatos e tecnologias, mesmo assim, a versão 2.0 levou quase 10 anos para ser lançada, em 2008, e já trouxe uma abordagem mais tecnológica e independente de linguagem, permitindo sua aplicação em diferentes contextos como em HTML, PDF, aplicativo, entre outros. A versão de 2018, 2.1, introduziu novos critérios voltados à acessibilidade mobile, considerando deficiências cognitivas, baixa visão e acessibilidade por toque. Por fim, a versão 2.2 lançada em 2023 acrescentou novos critérios relacionados a controles visíveis, navegação com teclado e foco, buscando melhorar a experiência de navegação para usuários com dificuldades motoras e cognitivas \cite{wcag_22_2023}.
+
+Alguns autores, como \cite{articleHistorico} tem se debruçado sobre a análise da evolução das diretrizes de acessibilidade na web, e destacam a crescente importância da conformidade para a melhoria da experiência do usuário e para a criação de ambientes digitais mais inclusivos. Dessa forma, os autores analisam os contextos históricos dos principais marcos no desenvolvimento das normas de acessibilidade, e através disso, investigam os impactos da acessibilidade indo além do cumprimento legal, e ressaltam seu papel na construção de experiências digitais acessíveis e centradas no usuário, independente de qualquer deficiência que venham a ter.
+
+Inclusive o trabalho de \cite{shah2023wcag} abordou o processo de atualização da versão WCAG 2.0 para WCAG 2.1, enfatizando a necessidade de manter-se atualizado com as novas versões das normas e com as novas tecnologias, como a mobile. Com base nisso a pesquisa propõe uma estratégia para atualização para a nova versão dividida em 4 etapas principais, sendo: avaliação, planejamento estratégico, implementação e testes, e com base nisso, as empresas conseguem mensurar de forma mais assertiva o esforço para ajustar seus sites/ sistemas. Ainda é ressaltado na pesquisa a importância das equipes interdisciplinares e do envolvimento de usuários no processo, bem como as barreiras enfrentadas na migração e os aprendizados obtidos, oferecendo uma visão prática e realista dos desafios.
+
+Já o trabalho de \cite{zdravkova2022remote} avalia a acessibilidade em sistemas de gestão de aprendizagem, aplicativos de videoconferência com áudio e vídeo, e cursos online abertos massivos (MOOCs) com base em 4 deficiências, sendo: motora, visual, auditiva e cognitiva com base nas recomendações da WCAG 2.1. Tal avaliação foi feita durante o período do covid-19, em que muitas instituições de ensino substituíram o ensino presencial pelo virtual, mostrando a fragilidade que alunos com deficiência tiveram que enfrentar para continuar estudando.
+
+Com base nos resultados da pesquisa, são propostas recomendações para tornar o aprendizado online mais acessível a estudantes com necessidades especiais, com o objetivo de garantir uma educação ampla para todos, sem discriminação por motivo de deficiência.
+
+Apesar das novas versões terem trazido conteúdo com aplicação em outros contextos, os princípios do WCAG continuam os mesmos que em sua primeira versão, segundo \cite{wcag_21}, conforme a sigla POUR (\textit{Perceivable - percepção, Operable - operável, Understandable - compreensível, Robust - robusto}).
+
+Quanto a Percepção, tem-se que a informação e os componentes da interface devem ser apresentados de forma que possam ser percebidos por todos os usuários, independentemente de qualquer deficiência, o que inclui diferentes formas de navegação e acesso ao conteúdo, por exemplo. Relacionado ao princípio Operável, seu objetivo é que os componentes da interface e a navegação devem estar disponíveis e funcionais por meio de diferentes formas de interação, como teclado ou comandos de voz. O princípio Compreensível dita que o conteúdo deve ser claro e previsível, permitindo fácil entendimento, independente do nível de conhecimento do usuário quando ao uso daquela ferramenta, e por fim, o item Robusto preza pela compatibilidade do conteúdo entre diferentes agentes de usuário, o que engloba as tecnologias assistivas.
+
+Além disso, o WCAG trabalha com 3 níveis de conformidade, A, AA e AAA, e elas são utilizadas para mensurar o quanto um site atende aos requisitos de acessibilidade. Cada nível representa um conjunto de critérios de sucesso com exigências crescentes \cite{wcag_22_2023}.
+
+O nível A é considerado o mínimo básico de conformidade, atendendo aos requisitos básicos de acessibilidade, e para isso ele deve remover as barreiras mais graves que impedem o acesso a pessoas com deficiência, como por exemplo ter a opção de texto para os conteúdos visuais ou permitir a navegação do conteúdo via teclado.
+
+O nível AA é o recomendado, pois fornece um melhor equilíbrio entre acessibilidade e viabilidade técnica e estética. Alguns exemplos incluem a possibilidade de redimensionar o conteúdo até 200\% sem perda de conteúdo, as páginas terem títulos descritivos com a marcação correta (h1, h2, etc) e um contraste mínimo de cor entre o texto e o fundo.
+
+Por fim, o nível AAA é considerado avançado e como o maior nível de conformidade envolvendo a acessibilidade, exigindo o cumprimento de todos os requisitos anteriores e ainda mais requisitos como por exemplo aumentar o contraste entre texto e fundo para 4:1, oferecer a definição de palavras incomuns ou jargões, fornecer legendas para conteúdo de video e também a interface adaptada para diversos estilos cognitivos e de aprendizagem. A Tabela \ref{tab:wcag-niveis} apresenta um resumo comparativo entre os níveis.
+
+\begin{table}[H]
+\centering
+\caption{Resumo comparativo dos níveis de conformidade da WCAG}
+\label{tab:wcag-niveis}
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{Nível} & \textbf{Foco Principal} & \textbf{Aplicabilidade} \\
+\hline
+A & Acessibilidade básica & Remove as barreiras críticas \\
+\hline
+AA & Acessibilidade robusta & Recomendado para a maioria dos sites \\
+\hline
+AAA & Acessibilidade avançada & Ideal, mas nem sempre viável ou exigido \\
+\hline
+\end{tabular}
+\caption*{\textbf{Fonte}: Do Autor, 2025.}
+\end{table}
+
+
+\subsection{WAI-ARIA}
+Já o WAI-ARIA, por sua vez, fornece um conjunto de atributos que podem ser adicionados ao HTML para descrever melhor os elementos da interface para tecnologias assistivas, como leitores de tela. Esses atributos são especialmente importantes para tornar aplicativos web dinâmicos mais compreensíveis por usuários com deficiência \cite{wicaria2023}.
+
+Importante diferenciar primeiramente a semântica nativa da WAI-ARIA, assim sendo, a semântica nativa refere-se ao uso apropriado dos elementos HTML que já possuem significado implícito e comportamento esperado pelos navegadores e tecnologias assistivas, como por exemplo elementos como botões, formulários, links, entre outros, e esses são automaticamente reconhecidos por leitores de tela, permitindo que usuários com deficiência naveguem e interajam com uma página sem necessidade de configurações adicionais. Esses elementos, quando utilizados corretamente, promovem acessibilidade de forma confiável, padronizada e eficiente~\cite{mozilla_html}.
+
+Por outro lado, a WAI-ARIA, como mencionado, é uma especificação do W3C que fornece atributos adicionais para melhorar a acessibilidade de interfaces ricas criadas com JavaScript e HTML dinâmico, permitindo a definição de papéis chamados de \textit{roles}, além de estados e propriedades que descrevem o comportamento de componentes de interface que não possuem um equivalente semântico direto em HTML, como menus personalizados, carrossel de imagens, abas ou diálogos modais, conforme \cite{w3c_aria}.
+
+Apesar da utilidade do ARIA em casos específicos, sua aplicação deve ser feita com cuidado, pois uma das diretrizes mais importantes da acessibilidade moderna menciona o seguinte: \textit{"First Rule of ARIA: Don’t use ARIA"} \cite{wicaria2023}. Assim, a regra afirma que sempre que existir um elemento HTML com semântica nativa apropriada, ele deve ser preferido em vez do uso de ARIA, pois os elementos nativos são automaticamente compreendidos por navegadores, leitores de tela e demais tecnologias assistivas, enquanto o ARIA depende de implementação correta, o que frequentemente não acontece.
+
+Um exemplo do uso incorreto de ARIA seria por exemplo aplicar a tag de botão  \texttt{role="button"} a uma \texttt{<div>} sem suporte ao teclado, o que poderia comprometer seriamente a acessibilidade da interface. Com base nisso, o uso do ARIA deve ser reservado apenas para situações em que a semântica nativa não é suficiente ou não existe, como no desenvolvimento de \textit{widgets} customizados, e nesse caso, seria necessário o uso dos atributos ARIA com precisão técnica, seguindo as especificações do W3C e sendo testados com tecnologias assistivas reais, como por exemplo em leitores de tela.
+
+Exemplos de como o uso incorreto do padrão podem impactar negativamente na navegação é apresentado por \cite{articleCoreia}, em que os autores avaliaram a acessibilidade de conteúdos em 50 sites da Coreia do Sul e 50 sites internacionais, e como resultados obtiveram que muitos sites não utilizam o WAI-ARIA ou o fazem de forma incorreta. No entanto, na Coreia do Sul, observou-se um aumento gradual no uso correto da especificação.
+
+A \autoref{tab:semantica-vs-aria} apresenta um resumo da diferença de quando usar a web semântica e ARIA com exemplos.
+
+\begin{table}[H]
+\centering
+\caption{Comparação entre Semântica Nativa e WAI-ARIA}
+\label{tab:semantica-vs-aria}
+\begin{tabular}{|p{4cm}|p{5cm}|p{5cm}|}
+\hline
+\textbf{Aspecto} & \textbf{Semântica Nativa (HTML)} & \textbf{WAI-ARIA} \\
+\hline
+\textbf{Definição} &
+Elementos HTML com significado e comportamento acessível embutidos. &
+Atributos que descrevem papéis, estados e propriedades para componentes personalizados. \\
+\hline
+\textbf{Compatibilidade} &
+Altamente compatível com navegadores e leitores de tela. &
+Depende de implementação correta e testes com tecnologias assistivas. \\
+\hline
+\textbf{Facilidade de uso} &
+Simples: comportamento acessível já incluso. &
+Complexo: requer conhecimento técnico e implementação adicional. \\
+\hline
+\textbf{Necessidade de script} &
+Funciona nativamente, sem necessidade de JavaScript. &
+Geralmente precisa ser combinado com JavaScript para funcionar corretamente. \\
+\hline
+\textbf{Quando usar} &
+Sempre que possível. &
+Somente quando não há equivalente nativo. \\
+\hline
+\textbf{Exemplo} &
+\texttt{<button>} (já acessível e com suporte ao teclado). &
+\texttt{<div role="button">} (precisa de ARIA + JS + eventos de teclado). \\
+\hline
+\end{tabular}
+\caption*{\textbf{Fonte}: Do Autor, 2025.}
+\end{table}
+
+Por fim, tem-se que a semântica nativa deve ser a base da acessibilidade web e o uso da WAI-ARIA deve ser tratada como uma extensão, tendo seu uso somente quando preciso, pois seu uso inadequado pode tornar a aplicação menos acessível.
+
+
+
+
+
+\subsection{ATAG}
+A ATAG (Accessibility Authoring Tools Guidelines), conforme \cite{W3C_ATAG} é uma diretriz desenvolvida pelo W3C, cujo objetivo é garantir que as ferramentas como  editores de sites, sistemas de gerenciamento de conteúdo (CMS) ou construtores de interfaces sejam acessíveis tanto para todos os perfis de usuários. Atualmente está na versão 2.0, tendo como base os princípios da versão 1.0, que são tornar as ferramentas de autoria acessíveis e ajudar os autores a criarem um conteúdo acessível.
+
+Para tornar as ferramentas acessíveis busca-se que elas também sejam utilizadas por pessoas com deficiência, e quanto ao auxílio a criação de conteúdo acessível, o mesmo tem o foco orientativo, ou seja, facilitar a criação de produtos digitais acessíveis por padrão, através de sugestões automáticas, validações, modelos inclusivos e boas práticas embutidas nos kits de design \cite{W3C_ATAG}.
+
+Com relação a versão 2.0 lançada em 2015, manteve-se todas as diretrizes da versão anterior, adicionando os níveis de conformidade A, AA e AAA propostos no modelo WCAG, além de uma maior integração com esse modelo, de forma a promover um conteúdo com maior acessibilidade por padrão \cite{w3c-atag20}.
+
+O trabalho de \cite{baldiris2022evaluation} por exemplo, fez a avaliação de quatro ferramentas gratuitas e de código aberto, de autoria para criação de conteúdos educacionais, com base nas diretrizes da ATAG, avaliando a acessibilidade do conteúdo educacional gerado por essas ferramentas, com base nas recomendações da WCAG. Como conclusão estabeleceram uma série de recomendações com o objetivo de ajudar a reduzir algumas lacunas relacionadas à acessibilidade.
+        .
+Assim, através da utilização dos kits que seguem a ATAG garante-se que o conteúdo acessível não seja algo que deixe para ser feito posteriormente ao desenvolvimento padrão, mas sim que seja algo feito de forma integrada, evitando-se o retrabalho e também a adequação as conformidades legais, além de também ampliar o alcance das ferramentas.
+
+
+% A \autoref{tab:comparative} destaca os principais elementos comparativos entre a WCAG, Marco Civil da Internet e ABNT NBR.
+
+\begin{table}[ht]
+\centering
+\small % ou \footnotesize, \scriptsize, \tiny
+\caption{Comparação entre WCAG, Marco Civil da Internet e ABNT NBR}
+\label{tab:comparative}
+\begin{tabular}{p{4cm} p{3cm} p{3cm} p{3cm}}
+\toprule
+\textbf{Critério} & \textbf{WCAG} & \textbf{Marco Civil da Internet} & \textbf{ABNT NBR 17225:2023} \\
+\midrule
+Origem & Internacional (W3C) & Nacional (Brasil) & Nacional (Brasil) \\
+Tipo & Diretriz técnica internacional & Lei geral sobre uso da internet & Norma técnica (ABNT) e legislação de inclusão \\
+Foco principal & Acessibilidade de conteúdo web (HTML, interfaces, apps) & Direitos digitais, privacidade e acesso universal à internet & Acessibilidade digital para pessoas com deficiência \\
+Aplicação & Referência global para acessibilidade web & Garantia de acesso universal e equitativo à internet & Aplicação técnica para sites, apps e portais públicos e privados \\
+Obrigatoriedade legal & Não obrigatória, mas recomendada e usada como base & Obrigatória para provedores e governo & Obrigatória quando citada por leis ou exigida em contratos públicos \\
+Relacionamento entre si & Base para a ABNT NBR 17225:2023 & Prevê o acesso universal, apoiando a inclusão digital & A NBR 17225 detalha tecnicamente as exigências legais da LBI \\
+Direitos abordados & Acesso a conteúdos digitais por pessoas com deficiência & Privacidade, neutralidade da rede, liberdade de expressão & Acesso igualitário, não discriminação, adaptação de plataformas digitais \\
+\bottomrule
+\multicolumn{4}{l}{\small \textbf{Fonte}: Do Autor, 2025} \\
+\end{tabular}
+\end{table}
+
+A tabela compara três normativas centrais para a acessibilidade digital no Brasil: WCAG, Marco Civil da Internet e ABNT NBR 17225:2023. A WCAG, de origem internacional, serve como base técnica para acessibilidade web, sendo amplamente adotada, embora não obrigatória. O Marco Civil, lei nacional, garante o acesso universal à internet e fundamenta juridicamente a inclusão digital. Já a ABNT NBR 17225:2023 traduz essas diretrizes e princípios legais em requisitos técnicos aplicáveis a sites e aplicativos no contexto brasileiro. Juntas, essas normativas se complementam ao combinar diretrizes técnicas, garantias legais e orientações práticas para promover a acessibilidade digital.
+
+
+\section{Leitores de tela e sua interpretação de interfaces}
+
+De acordo com \citeonline{incaper2023}, os leitores de tela são usados majoritariamente por pessoas com maiores graus de deficiência visual, sendo muitas vezes a principal forma de acesso aos conteúdos digitais, e sua função é basicamente ler ou traduzir o conteúdo que está na interface para uma saída em áudio ou linhas braille. Alguns dos modelos mais conhecidos são o NVDA (\textit{NonVisual Desktop Access}), o JAWS (\textit{Job Access With Speech}) e o VoiceOver que está presente nos dispositivos Apple.
+
+Dessa forma, e conforme \citeonline{matuzovic2024_accessibility_cookbook}, os leitores de tela trabalham com o conceito de árvores de acessibilidade, que é uma estrutura paralela a árvore DOM (\textit{Document Object Model}), que é gerada pelos navegadores e representa os elementos de uma página da web com as informações relevantes para tecnologias assistivas. Porém, enquanto a árvore DOM contém todos os elementos HTML, a árvore de acessibilidade filtra e transforma apenas os elementos visíveis e semanticamente relevantes, incluindo informações como labels, texto alternativo nas imagens, função dos elementos (botão, imagem, título, link), estado atual (ativo, selecionado, expandido), rótulos em campos de formulário, entre outros.
+
+A geração da árvore de acessibilidade é baseada na semântica nativa do HTML, atributos ARIA e estilos CSS que muitas vezes afetam a visibilidade dos elementos na tela, e nisso começa o problema do uso dos leitores de tela, visto que eles fazem a análise da estrutura do código HTML e transmitem ao usuário, de forma linear, as informações contidas na página, assim, o correto funcionamento desses leitores depende de forma significativa como o código HTML foi criado e se ele possui os elementos que permitem sua leitura. Um exemplo claro é o uso da tag alt dentro das imagens, que faz a descrição visual do conteúdo da imagem, e que só é utilizado por esses leitores de tela e também caso a imagem não tenha sido carregada por algum problema de conexão ou por não existir.
+
+Outros elementos como <header>, <nav>, <main>, <article> e <footer> informam ao leitor de tela qual a função daquela parte da página, permitindo que o usuário navegue por seções com maior fluidez e entendimento, visto que essas ferramentas funcionam de forma linear, o que também pode ser um tanto quanto demorado para ler páginas grandes ou com muito conteúdo, como publicidades em geral. Da mesma forma, utilizar <button> no lugar de <div onclick="..."> ou <label> vinculado a campos de formulário são práticas que ajudam o leitor de tela a identificar corretamente ações e entradas de dados.
+
+O trabalho de \citeonline{incaper2023} e \citeonline{wai2017} apresenta uma série de dicas e boas práticas para a correta interpretação do código por leitores de tela, sendo as principais citadas abaixo, e além disso, a Tabela \ref{htmlxleitores} apresenta o equivalente em HTML considerando essas boas práticas de desenvolvimento para o uso de leitores de tela.
+
+\begin{itemize}
+
+  \item Evite links genéricos como “clique aqui”. Use descrições completas e, quando necessário, adicione o atributo \texttt{title} para fornecer informações complementares.
+
+  \item Não faça uso de tabelas com células mescladas.
+
+  \item Evite usar imagens para representar textos que poderiam ser escritos.
+
+  \item Gerencie corretamente o foco com \texttt{tabindex}, permitindo navegação fluida por teclado. Use \texttt{tabindex="-1"} para elementos que devem receber foco programaticamente, mas não na ordem natural de tabulação.
+
+  \item Em apresentações (PowerPoint, por exemplo), organize a ordem de tabulação dos elementos, utilize fontes sem serifa de tamanho mínimo 32pt e mantenha bom contraste entre texto e fundo.
+
+  \item O texto deve ser alinhado à esquerda (sem justificação) para facilitar a leitura por pessoas com deficiência visual.
+
+  \item Hiperlinks devem ser visualmente distintos do texto comum e apresentar indicadores visuais ao foco (por mouse ou teclado).
+
+  \item Títulos de páginas devem ser curtos, objetivos e iniciar com as informações mais importantes, bem como utilizar corretamente os estilos de títulos (h5, h4, etc) para que leitores de tela reconheçam a hierarquia da informação.
+
+  \item Estruture o conteúdo com títulos e subtítulos marcados com os estilos nativos do editor (ex.: Título 1, Título 2).
+
+  \item Evite espaços em branco excessivos para simular mudança de página. Use comandos de quebra de página apropriados (como \texttt{CTRL + Enter}).
+
+  \item Insira links clicáveis no sumário de documentos digitais para facilitar a navegação.
+
+  \item Sempre teste seus conteúdos com leitores de tela populares, como NVDA (Windows), VoiceOver (dispositivos Apple) ou Orca (Linux), para garantir que estão acessíveis na prática.
+
+  
+\end{itemize}
+
+Por fim, os autores \citeonline{incaper2023} ainda sugerem que não se utilize apenas de um meio visual para passar uma informação, como no caso da imagem na Figura \ref{gato_fofo}, em que se utiliza o elemento visual das cores, mas também o elemento textual dos números.
+
+\begin{figure}[htb] 
+    \centering
+    \caption{Uso de mais um elemento visual para representar o conteúdo}
+    \includegraphics[width=1.0\textwidth]{Figuras/cap2_img_1.PNG}
+    \label{gato_fofo}
+    \caption*{Fonte: \cite{incaper2023}}
+  \end{figure}
+
+  Abaixo também apresenta-se a descrição de como ocorre a leitura dos elementos HTML, de forma geral, conforme \cite{matuzovic2024_accessibility_cookbook}:
+
+\begin{itemize}
+
+  \item Títulos (<h1>, <h2>): Os leitores de tela informam a hierarquia dos títulos e isso permite que os usuários tenham uma visão estruturada da página e possam navegar entre seções com atalhos.\\
+    Exemplo verbalizado:\\
+    \textit{“Heading level 1: Bem-vindo ao site”}
+  \item Imagens (<img>)\\
+    Se houver atributo alt:\\
+        \textit{“Image: logotipo da empresa”}\\
+    Se alt estiver vazio (alt=""):\\
+        \textit{A imagem é ignorada }\\
+    Se alt estiver ausente:\\
+        \textit{Leitores podem ler o nome do arquivo (o que não é recomendável).}\\
+    \item Regiões e marcos (<nav>, <main>, <aside>): são elementos que permitem a navegação rápida por partes da página\\
+    \textit{“Navigation region”, “Main content”, “Complementary content”}
+     \item Formulários sem rótulo/ label (<input> sem <label> ou aria-label): são usados para que os usuários entendam o propósito do campo\\
+    \textit{“Edit text” (sem contexto)}\\
+    Com rótulo:\\
+    “Search, edit text”
+\end{itemize}
+
+Ainda, é possível executar a leitura contínua, onde o leitor de tela percorre sequencialmente os elementos da árvore de acessibilidade, sendo similar à leitura linear de um documento, o que é ideal para leituras de textos longos. %conforme exemplo abaixo \cite{matuzovic2024_accessibility_cookbook}.
+%   \textit{ “Heading level 1: Bem-vindo ao site. Paragraph: Este site oferece...”
+%Outro recurso fundamental são os atributos ARIA (\textit{Accessible Rich Internet Applications}), desenvolvidos para aumentar a acessibilidade em interfaces mais complexas (\cite{wai-aria}). Nesse caso, atributos como aria-label, aria-labelledby, aria-hidden ou role="alert" comunicam ao leitor de tela o propósito ou estado de elementos que não são naturalmente compreendidos via HTML. Por exemplo, uma div estilizada como botão visualmente pode ser anunciada corretamente se receber o atributo role="button" e responder aos eventos esperados do teclado.}
+
+Entretanto, a má utilização de ARIA ou a ausência de estrutura semântica adequada pode causar várias consequências, como ao invés de facilitar a leitura, pode gerar confusão e fazer com que elementos "invisíveis" não sejam encontrados, ou até mesmo fazer com que menus sejam lidos simplesmente como blocos de texto, sem as opções de link e navegação que um menu deveria possuir.
+
+Devido a esses problemas de sua má utilização, um de seus princípios básicos é “não use ARIA se puder usar HTML nativo”, pois os elementos semânticos da linguagem já trazem embutidos os comportamentos e a acessibilidade esperados pela maioria dos leitores de tela \cite{wicaria2023}.
+
+\begin{table}[H]
+\centering
+\small
+\caption{Exemplos de boas práticas para leitores de tela}
+\begin{tabular}{|p{6cm}|p{9.3cm}|}
+\label{htmlxleitores}
+\hline
+\textbf{Código comum em HTML} & \textbf{Melhoria com acessibilidade} \\
+\hline
+\texttt{<div onclick="enviar()"> Enviar </div>} & 
+\texttt{<button onclick="enviar()"> Enviar </button>}\\
+& Uso do elemento nativo \texttt{<button>} que permite foco por teclado e melhor interpretação por leitores de tela. \\
+\hline
+\texttt{<img src="logo.png">} & 
+\texttt{<img src="logo.png" alt="Logotipo da empresa XYZ">}\\
+& O atributo \texttt{alt} fornece descrição textual da imagem, essencial para leitores de tela e para quando a imagem, por algum motivo, não puder ser carregada. \\
+\hline
+\texttt{<div>Menu principal</div>} & 
+\texttt{<nav aria-label="Menu principal">...</nav>}\\
+& Uso do elemento semântico \texttt{<nav>} com atributo \texttt{aria-label} para melhorar a navegação e semântica da página. \\
+\hline
+\texttt{<span>Erro!</span>} & 
+\texttt{<div role="alert">Erro ao enviar o formulário.</div>}\\
+& O atributo \texttt{role="alert"} faz com que o leitor de tela anuncie automaticamente mensagens importantes. \\
+\hline
+\texttt{<ul><li>...</li></ul>} (sem título) & 
+\texttt{<h2 id="produtos">Produtos</h2>} \\
+& \texttt{<ul aria-labelledby="produtos">...</ul>} \\
+& O atributo \texttt{aria-labelledby} associa o título à lista, facilitando a contextualização para leitores de tela. \\
+\hline
+\texttt{<a href="doc.pdf">Clique aqui</a>} & 
+\texttt{<a href="doc.pdf" title="Baixar regulamento em PDF">Regulamento (PDF)</a>} \\
+& O atributo \texttt{title} torna o propósito do link mais claro. \\
+\texttt{<div>Rodapé</div>} & 
+\texttt{<footer>Rodapé</footer>} \\
+& O uso de \texttt{<footer>} identifica semanticamente a seção de rodapé da página. \\
+\hline
+\texttt{<input type="text">} & 
+\texttt{<label for="nome">Nome:</label>} \\
+& \texttt{<input id="nome" type="text">} \\
+& O uso de \texttt{<label>} vinculado ao \texttt{input} permite que o leitor de tela anuncie o campo corretamente. \\
+\hline
+\texttt{<i class="fa fa-star"></i>} (ícone decorativo) & 
+\texttt{<i class="fa fa-star" aria-hidden="true"></i>} \\
+& Ícones puramente decorativos devem ser ocultos dos leitores com \texttt{aria-hidden="true"}. \\
+\hline
+\texttt{<div tabindex="0">...</div>} sem função clara & 
+\texttt{<section tabindex="-1">...</section>} \\
+& O uso adequado de \texttt{tabindex} permite navegação controlada por teclado, quando necessário. \\
+\hline
+\end{tabular}
+\caption*{\textbf{Fonte}: Do Autor, 2025.}
+\end{table}
+
+Além disso, os leitores de tela percorrem o conteúdo de maneira sequencial, o que significa que a ordem dos elementos no código influencia diretamente na experiência do usuário, o que reforça a importância de se planejar a estrutura do HTML como uma narrativa acessível, onde títulos, listas, botões e formulários seguem uma ordem lógica e consistente, tal como demonstrado na Figura \ref{tags_semantica}, onde antes mesmo de visualizar o resultado em tela, faz-se ideia de o que significa, aonde estará posicionado e o objetivo do trecho.
+
+\begin{figure}[H] 
+    \centering
+    \label{tags_semantica}
+    \caption{Comparação de tags semânticas em código HTML}
+    \includegraphics[width=1.0\textwidth]{Figuras/cap2_img_2.PNG}
+    \label{tags_semantica}
+    \caption*{Fonte: \cite{abnovato2021html}}
+  \end{figure}
+
+Por fim, a pesquisa de \citeonline{nttdata}, realizada pela NTT Data em 2022 fez um levantamento dos principais leitores de tela utilizados no Brasil, obtendo 564 respostas válidas, sendo que a maior parte dos usuários de desktop utilizam o leitor de tela NVDA com Chrome ou NVDA com Firefox, e quanto aos mobile, os leitores mais utilizados são TalkBack com Chrome, VoiceOver com Safari e JieShuo (chinês) com Chrome. A pesquisa ainda fez o levantamento demográfico por região, sexo, nível de escolaridade e faixa etária, além de como o leitor de tela é de fato utilizado (navegação por região da página, links, cabeçalhos, entre outros) e cruzamento das informações, permitindo um panorama geral do uso desses leitores no Brasil.
+
+De forma complementar, a Tabela \ref{tab:leitores_tela} faz um resumo dos principais leitores de tela, sendo NVDA, JAWS e TalkBack.
+
+\begin{table}[ht]
+\centering
+\caption{Comparação entre leitores de tela populares}
+\begin{adjustbox}{max width=\textwidth}
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+\textbf{Característica} & \textbf{NVDA} & \textbf{JAWS} & \textbf{TalkBack} & \textbf{VoiceOver} \\ \hline
+
+\textbf{Plataforma} & Windows & Windows & Android & macOS / iOS \\ \hline
+
+\textbf{Custo} & Gratuito & Pago (licença) & Gratuito & Gratuito \\ \hline
+
+\textbf{Voz padrão} & \textit{Microsoft Speech Platform} & Várias opções, voz humana & Google TTS & Siri \\ \hline
+
+\textbf{Personalização} & Alta & Muito alta & Moderada & Alta \\ \hline
+
+\textbf{Suporte a idiomas} & Multilíngue & Multilíngue & Multilíngue & Multilíngue \\ \hline
+
+\textbf{Popularidade} & Muito usado & Muito usado (profissional) & Muito usado (mobile) & Muito usado (usuários Apple) \\ \hline
+
+\end{tabular}
+\end{adjustbox}
+\label{tab:leitores_tela}
+\caption*{\textbf{Fonte}: Do Autor, 2025.}
+\end{table}
+
+
+\section{Design de interface e documentação no Figma}
+
+Segundo \citeonline{garrett2011} o design de interfaces é um componente essencial no desenvolvimento de produtos e serviços digitais que atendam às necessidades dos usuários de forma eficiente e inclusiva. Nos últimos anos, o Figma destacou-se como líder design de interfaces e prototipação colaborativa, com destaque pela sua plataforma baseada em nuvem que permite múltiplos usuários trabalharem de forma conjunta e colaborativa em um projeto \cite{ibrahim2023effectiveness}. Essa característica revolucionou o processo de criação, facilitando a comunicação entre equipes multidisciplinares e acelerando o ciclo de desenvolvimento.
+
+No contexto de \textit{handoff}, o Figma facilita a entrega técnica por meio da exposição de propriedades CSS, medidas, cores e exportação de ativos. Por outro lado, esse processo apresenta limitações importantes quando se trata de acessibilidade.
+
+Assim, uma das funcionalidades utilizadas do Figma é o suporte ao uso de \textit{UI Kits}, ou seja, coleções de componentes visuais padronizados, como botões, formulários, ícones e layouts, que garantem consistência e coerência no design \cite{ryhus2024differences}. A utilização desses kits permite uma maior produtividade e a padronização visual independente da plataforma utilizada, o que contribui para que as interfaces sejam reconhecíveis e intuitivas para os usuários, e acordo com \citeonline{garrett2011}. Além disso, eles tornam o desenvolvimento mais produtivo visto que não é necessário retrabalho na manutenção e atualização dos projetos.
+
+Apesar das vantagens mencionadas, o Figma também enfrenta desafios e possui limitações quanto a usabilidade, pois embora existam diversos \textit{plugins} que ajudam na análise do contraste de cores ou na validação da tabulação através do teclado, por exemplo, elas ainda não estão completamente integradas ao fluxo natural de uso da ferramenta, de acordo com \citeonline{oliveira2023development}. Por causa disso, algumas atualizações na documentação dos requisitos de acessibilidade muitas vezes precisam ser feitas manualmente, o que pode contribuir para que fiquem desatualizadas ou inconsistentes.
+
+Além disso, \citeonline{lindholm2023accessibility} informa sobre a ausência de suporte nativo a práticas inclusivas. A ferramenta também não realiza validações automáticas de acessibilidade, como verificação de contraste ou estrutura de navegação por teclado, o que exige atenção redobrada dos designers. Além disso, é comum a ausência de rótulos textuais adequados em botões e elementos interativos, o que compromete o uso por leitores de tela, especialmente em fluxos onde não há documentação paralela \cite{lindholm2023accessibility}.
+
+Apesar disso, os pesquisadores \citeonline{kokate2022exploring} realizaram a avaliação de 10 ferramentas digitais de prototipação, estando o Figma incluso, de forma a entender os recursos de acessibilidade que disponibilizavam e descobriu-se que a acessibilidade dava-se basicamente através de \textit{plugins} terceiros, demonstrando o potencial de melhora nas mesmas.
+
+Nesse cenário, os UI Kits desempenham um papel importante, pois através dos componentes já padronizados mantêm-se a consistência visual e os erros durante a prototipação são reduzidos. Mais importante ainda, kits bem projetados podem incorporar práticas acessíveis desde sua concepção, promovendo decisões mais responsáveis e inclusivas \cite{lindholm2023accessibility}. No entanto, a eficácia desses kits depende diretamente de sua correta adoção e da clareza de suas documentações.
+
+Já a ausência de documentação de acessibilidade no \textit{handoff} pode gerar falhas críticas, onde os desenvolvedores podem frequentemente se deparar com componentes sem rótulos acessíveis, hierarquias de foco desorganizadas e estruturas não semânticas, o que resulta em interfaces mal adaptadas para usuários com deficiências \cite{lindholm2023accessibility}. Com base nisso, a inserção de anotações e guias visuais dentro do próprio arquivo Figma, ou o uso de kits com diretrizes explícitas, torna-se fundamental para garantir a continuidade da intenção de design ao longo do ciclo de desenvolvimento.
+
+
+\section{Uso de kits e anotações visuais para acessibilidade}
+Segundo \citeonline{cooper2014}, a acessibilidade digital apresentou avanço com as diretrizes propostas pelo WCAG e W3C, porém, ainda assim, sua completa e eficaz aplicação apresenta desafios e barreiras, principalmente na etapa da prototipação e do design das interfaces. Nesse cenário, os kits e anotações visuais aparecem como soluções eficazes para integrar práticas acessíveis ao fluxo de trabalho cotidiano de design, reforçando também a acessibilidade como uma etapa do projeto.
+
+
+
+Os kits de anotação de acessibilidade (\textit{A11y Annotation Kits}), amplamente difundidos na comunidade Figma, representam uma ferramenta crucial para integrar especificações de acessibilidade diretamente nos artefatos de design, como \textit{wireframes} e protótipos. Esses kits funcionam como uma camada de documentação visual, onde anotações indicam atributos essenciais para a experiência de usuários de tecnologias assistivas, tais como a ordem de foco do teclado, a hierarquia de leitura, o contraste de cores e o uso de atributos ARIA (\textit{Accessible Rich Internet Applications}). Ao tornar essas especificações explícitas na fase de design, os kits não apenas facilitam a comunicação entre designers e desenvolvedores, mas também servem como um recurso de aprendizado para equipes multidisciplinares. Essa necessidade é corroborada pela pesquisa da \citeonline{handtalk2023}, que aponta a falta de experiência prévia em acessibilidade como um desafio recorrente entre os profissionais da área.
+
+A descoberta de tais recursos na comunidade Figma é facilitada por buscas com termos como "A11y", "Accessibility" ou "Accessibility kit". Entre os mais proeminentes, destacam-se o \textit{A11y Annotation Kit} \citeonline{a11ykit}, focado na clareza da comunicação técnica; o \textit{Web Accessibility Annotation Kit} \citeonline{cvs_health_kit}, orientado à estrutura macro da página; o \textit{Intopia's Accessibility Annotation Kit} \citeonline{intopia_kit}, que se aprofunda na conformidade com as diretrizes WCAG; e o \textit{Pencil A11Y Kit} \citeonline{pencil_a11y_kit}, que adota uma abordagem visual distinta para fases iniciais de ideação. Esses kits, embora com abordagens diferentes, compartilham o objetivo de traduzir os requisitos abstratos de acessibilidade em especificações concretas, como demonstrado na \autoref{tab:kit_comparison_long}  e nas \autoref{cvs_health_kit} e \autoref{brainly_kit}, que ilustram a utilidade de alguns desses kits.
+
+\begin{longtable}{@{}p{2.8cm} p{4cm} p{3.5cm} p{3.5cm}@{}}
+
+% LEGENDA E CABEÇALHOS
+\caption{Análise comparativa entre os principais kits de anotação de acessibilidade}
+\label{tab:kit_comparison_long} \\
+\toprule
+\textbf{Kit Figma} & \textbf{Escopo das Anotações} & \textbf{Público-Alvo Principal} & \textbf{Ponto Forte Estratégico} \\ 
+\midrule
+\endfirsthead % Fim do cabeçalho da primeira página
+
+\caption[]{(Continuação)} \\
+\toprule
+\textbf{Kit Figma} & \textbf{Escopo das Anotações} & \textbf{Público-Alvo Principal} & \textbf{Ponto Forte Estratégico} \\ 
+\midrule
+\endhead % Fim do cabeçalho das páginas de continuação
+
+% RODAPÉ DE CONTINUAÇÃO (OPCIONAL)
+\midrule
+\multicolumn{4}{r}{\textit{Continua na próxima página...}} \\
+\endfoot
+
+\bottomrule
+\addlinespace
+\multicolumn{4}{c}{\small\textbf{Fonte}: Do Autor, 2025.} \\
+\endlastfoot
+
+% CORPO DA TABELA
+A11y Annotation Kit & Estrutura semântica de componentes (cabeçalhos, botões, links) e fluxo de interação (ordem de foco). & Designers e Desenvolvedores Front-end. & \textbf{Simplicidade e Clareza:} Foco em traduzir visualmente a estrutura HTML e os atributos ARIA mais comuns, agilizando o \textit{handoff}. \\
+\addlinespace 
+Web Accessibility Annotation Kit & Estrutura macro da página, incluindo \textit{landmarks} (cabeçalho, navegação, conteúdo principal), e hierarquia de leitura. & Designers, Arquitetos de Informação e Desenvolvedores. & \textbf{Visão Estrutural:} Garante que a navegação e a compreensão global da página sejam lógicas para usuários de leitores de tela. \\
+\addlinespace
+Intopia's Accessibility Annotation Kit & Anotações detalhadas em nível de componente, com referências explícitas aos critérios de sucesso das WCAG. & Times de Produto, QAs e Desenvolvedores que necessitam de alta conformidade técnica. & \textbf{Rigor Técnico e Educacional:} Atua como um guia de conformidade, conectando o design às regras das WCAG e educando a equipe. \\
+\addlinespace
+Pencil A11Y Kit & Anotações com estilo visual "desenhado à mão" (\textit{sketch}), ideal para fases de ideação e \textit{wireframing} de baixa fidelidade. & Designers de UX/UI em fases iniciais de projeto. & \textbf{Comunicação Rápida e Informal:} Reduz a formalidade das anotações, incentivando a inclusão de considerações de acessibilidade desde o brainstorming. \\
+
+\end{longtable}
+
+\begin{figure}[h] 
+    \centering
+    \label{cvs_health_kit}
+    \caption{Exemplo de aplicação do kit da CVS Health}
+    \includegraphics[width=1.0\textwidth]{Figuras/A11y_cvs_health.png}
+    \label{cvs_health_kit}
+    \caption*{Fonte: \citeonline{cvs_health_kit}}
+\end{figure}
+
+\begin{figure}[H] 
+    \centering
+    \label{brainly_kit}
+    \caption{Exemplo de aplicação do Pencil A11Y Kit}
+    \includegraphics[width=1.0\textwidth]{Figuras/A11y_brainly.png}
+    \label{brainly_kit}
+    \caption*{Fonte: \citeonline{pencil_a11y_kit}}
+\end{figure}
+
+De forma complementar, a Microsoft também tem investido no design inclusivo, através de seus \textit{toolkits}, que são kits que orientam o designer na construção de soluções que considerem diferentes capacidades físicas, cognitivas e sensoriais  \cite{microsoftinclusive, inclusivebydesign2016}.
+
+Nesse teor o trabalho de \citeonline{lindholm2023accessibility} explora como um kit de anotações para acessibilidade pode apoiar designers e comunicar especificações de acessibilidade para desenvolvedores, indo além de apenas cumprir as diretrizes e legislações vigentes. Assim, utilizando-se métodos de pesquisa qualitativa e um processo de design centrado no usuário, por meio de atividades de design como entrevistas, ideação, prototipagem e testes de usabilidade, explora-se uma ferramenta de anotação de forma a avaliar como ela poderia contribuir para o suporte e a comunicação. Como conclusão, o projeto indica que os kits de anotações têm potencial para melhorar a comunicação e apoiar os designers em seu processo de criação.
+
+Um outro fator de inclusão considerado pelos pesquisadores \citeonline{fraga-viera2020inclusive} é a criação e modelagens de produtos que sejam verdadeira inclusivos, considerando questões como gênero, idade, valores éticos ou deficiências, propondo assim o desenvolvimento de um kit para tal.
+
+Tem-se então que os benefícios desses kits não se restringem à etapa de design, mas se estendem até mesmo na fase de implementação, transformando-se em requisitos de acessibilidade que precisam ser de fato desenvolvidos e testados. Com base nisso, os kits atuam como facilitadores no processo de \textit{handoff} entre design e desenvolvimento \cite{bennett2019}. 
+
+No presente contexto, os \textit{handoff} podem ser entendidos como momentos de transição de responsabilidade ou de entrega de materiais entre diferentes equipes ou profissionais, como por exemplo da fase de design para a de desenvolvimento, ou do desenvolvimento para a etapa de testes, conforme \citeonline{cooper2014}.
+
+Por outro lado, \citeonline{bennett2019} menciona que os \textit{handoffs} tem pouca documentação clara, sendo então propensos a erros e mal entendidos por parte da equipe, principalmente caso ela seja muito grande, podendo gerar também entregas incompletas ou ambíguas e uso de ferramentas incompatíveis entre os times.
+
+O estudo de \citeonline{bennett2019} então aponta que as falhas de comunicação entre as equipes são uma das principais causas de não conformidade com critérios de acessibilidade, mesmo quando estes foram considerados no design inicial, e uma forma de melhorar os \textit{handoffs} é justamente o uso de ferramentas como o Figma, Jira, Notion, Zeplin, entre outros, além de constantes reuniões de alinhamento, checklists para entrega e documentação enxuta e clara sobre os entregáveis esperados.
+
+\begin{comment}
+Adicionalmente, \textit{design systems} modernos têm integrado práticas acessíveis de forma sistematizada, como por exemplo "O Material Design", que inclui diretrizes específicas para cores, tipografia e foco do teclado, fornecendo componentes já com acessibilidade embutida \cite{materialdesign2025}. 
+
+Outros kits são o \textit{Carbon Design System} da IBM e o \textit{Fluent UI}, também da Microsoft e que seguem o mesmo princípio básico, promovendo a reutilização de componentes acessíveis e escaláveis. Esses sistemas mostram como padronizações visuais podem ser vetores não apenas de consistência estética, mas de inclusão técnica e social \cite{carbondesign, fluentui}.
+
+A Tabela \ref{tab:kits_acessibilidade_comparacao} apresenta uma breve comparação entre os kits mencionados, trazendo o diferencial de seu foco, suporte a acessibilidade, facilidade de \textit{handoff}, padronização e recursos de escalabilidade.
+
+\begin{table}[H]
+\centering
+\small 
+\caption{Comparação dos kits e sistemas de design para acessibilidade}
+\begin{tabular}{|l|c|c|c|c|c|}
+\hline
+\textbf{Critérios} & \textbf{A11y Kit} & \textbf{Microsoft} & \textbf{Material} & \textbf{Carbon} & \textbf{Fluent UI} \\
+\hline
+Foco & Anotações & Inclusivo & UI & UI & UI \\
+\hline
+Suporte Acessibilidade & Alto & Alto & Alto & Alto & Alto \\
+\hline
+Facilidade no Handoff & Alto & Médio & Alto & Médio & Médio \\
+\hline
+Padronização & Médio & Alto & Alto & Alto & Alto \\
+\hline
+Reuso/Escalabilidade & Médio & Alto & Alto & Alto & Alto \\
+\hline
+\end{tabular}
+\label{tab:kits_acessibilidade_comparacao}
+\caption*{\textbf{Fonte}: Do Autor, 2025.}
+\end{table}
+\end{comment}
+
+Nota-se que, conforme mencionado por \cite{articleBotelho}, os kits auxiliam em diversos aspectos da acessibilidade, porém ainda possuem limitações quando aos aspectos subjetivos ou contextuais da acessibilidade, sendo necessário um esforço consciente e sistêmico para assegurar que o potencial das tecnologias digitais para a inclusão seja realizado, como por exemplo, \textit{smartphones} podem ser incompatíveis com aparelhos auditivos necessários para pessoas surdas, telas sensíveis demais para quem tem deficiências motoras, e páginas web frequentemente carecem dos rótulos de texto necessários para softwares leitores de tela usados por pessoas cegas, e mesmo que cada um desses exemplos seja corrigido, a acessibilidade pode ser de curta duração se o processo de produção por trás desse hardware ou software não for ajustado, visto que o mundo digital evoluiu de forma ágil e constante. Assim, considerando o uso dos kits no início do projeto, busca-se atuar de madeira preventiva, reduzindo as correções e melhorando a qualidade final o produto, bem como reduzindo custos com retrabalho.
+
+Além disso, \cite{rosenfield2020} menciona que esses kits também  permite o envolvimento de \textit{stakeholders} não técnicos no processo de validação e discussão a respeito da acessibilidade. Assim, a consideração de requisitos que afetam a interface diretamente torna-se mais fácil a compreensão do impacto do design sobre elas, o que é especialmente relevante em equipes grandes e multidisciplinares, em que mais áreas contribuem no projeto, como negócio, marketing ou o setor jurídico.
+
+Outro aspecto importante é a ausência de uma cultura organizacional voltada à inclusão e acessibilidade, conforme pesquisa realizada por \cite{parthasarathy2023}, que após estudo realizado com desenvolvedores web na Índia, descobriu-se que cerca de 70\% deles nunca tinham recebido nenhum tipo de treinamento formal sobre acessibilidade, o que confirma que tal tópico muitas vezes é visto como secundário, e por falta de tempo na construção das ferramentas, é muitas vezes ignorado.
+
+Designers e desenvolvedores de sistemas frequentemente enfrentam desafios para implementar requisitos de acessibilidade de forma clara e eficaz, especialmente quando há pouca experiência ou ferramentas específicas para auxiliar nesse processo \citeonline{handtalk2023}. 
+
+
+% Com base nisso, a acessibilidade online não pode ser considerada como uma etapa adicional ou diferencial no uso dos serviços digitais, mas como um requisito essencial que deve ser pensado e planejado desde a concepção do produto, de forma a garantir o direito de acesso à todos. Algumas ferramentas de validação automática, como o WAVE e o Access Monitor, podem auxiliar no diagnóstico de problemas, além de que treinamentos voltados aos desenvolvedores e uma possível legislação que responsabilize os mesmos, pode agilizar o uso de tecnologias assistivas.
+
+Finalmente, soluções como o Wilia destacam-se ao oferecer funcionalidades específicas aliadas a padronização visual, documentação acessível e facilidade de exportação de dados para plataformas de desenvolvimento. Com isso, essas ferramentas representam a convergência entre o design acessível e a engenharia prática, o que visa promover uma cultura de acessibilidade como prática contínua e não apenas como etapa final ou obrigatoriedade legal.
+
+
+
+%trabalhos relacionados sendo adicionados ao longo do texto.
+

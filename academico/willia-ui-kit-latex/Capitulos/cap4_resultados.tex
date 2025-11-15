@@ -1,0 +1,94 @@
+\chapter{Resultados} 
+\label{cap4_resultados} 
+
+O principal resultado deste trabalho é o \textit{Wilia} (acrônimo para Web Accessibility Annotation Kit), um sistema de especificação visual desenvolvido na plataforma Figma. O \textit{Wilia} está disponível publicamente em \url{https://www.figma.com/design/2hN2ajzPoqDtoGcsAl0gxN/Wilia--Web-Accessibility-Annotation-Kit} para consulta.
+
+O nome \textbf{Wilia} foi cuidadosamente selecionado para refletir a missão central do artefato. Trata-se de um acrônimo para \textbf{W}eb Accessib\textbf{ili}ty \textbf{A}nnotation Kit, destacando em sua própria nomenclatura a tríade de elementos que o compõem: a Web como ambiente de aplicação, a Acessibilidade (\textit{Accessibility}) como valor fundamental e o Kit de Anotação como formato. Essa escolha nominal visa não apenas fornecer uma identidade única e memorável, mas também encapsular o propósito de que o kit atua como um sistema dedicado a traduzir diretrizes complexas de inclusão digital em ferramentas de design de uso prático e diário.
+
+A concepção do kit está rigorosamente baseada nos padrões técnicos da WCAG 2.2 e WAI-ARIA, e enriquecida por boas práticas de mercado.
+
+Sobre os artefatos selecionados como comparativo e modelagem que basearam o \textit{Wilia}, foi realizada uma análise comparativa a respeito da estrutura, utilização e disponibilidade dos recursos. A análise revelou que, embora fossem funcionalmente competentes, apresentavam lacunas estratégicas:
+\begin{description}
+    \item [Documentação Dissociada:] A fundamentação teórica (o "porquê" de uma anotação) não estava muito bem difundida nos kits, exigindo que o usuário buscasse conhecimento em fontes externas e interrompesse seu fluxo de trabalho.
+
+    \item [Foco na Ferramenta, Não no Conhecimento:] Os kits forneciam o meio para rotular um elemento, mas não educavam o designer sobre o impacto daquela decisão na experiência de um usuário de tecnologia assistiva.
+
+    \item [Fluxo de Trabalho Fragmentado:] A aplicação das anotações frequentemente exigia que o usuário procurasse e gerenciasse os componentes individuais dispersos na biblioteca, tornando o processo lento e suscetível a inconsistências.
+\end{description}
+
+Essas lacunas contribuíram para a modelagem estratégica do Wilia, possibilitando, como seu grande diferencial, a funcionalidade de atuar como uma ponte entre a teoria e a prática. O \textit{Wilia} traduz normas de acessibilidade em componentes visuais e diretrizes acionáveis, criando uma ferramenta de aplicação direta e intuitiva que pode se integrar ao fluxo de trabalho de designers e desenvolvedores, capacitando-os a criar interfaces mais inclusivas desde a sua concepção.
+
+A construção do \textit{Wilia} passou por uma série de etapas interdependentes, sendo o primeiro resultado a elaboração de uma página introdutória no projeto no Figma. Dessa forma, na seção inicial apresentam-se os objetivos do kit, o público-alvo, e o contexto de sua criação, bem como links para as documentações e diretrizes mencionados acima. A introdução foi planejada como um diálogo com o usuário que irá usar o kit, buscando com isso repassar também o valor social da acessibilidade e o que motivou a criação do kit.
+
+A página de \textit{Visão geral}, conforme trecho recortado e demonstrado na \autoref{wilia_1}, que oferece uma visão global de todos os componentes criados, permitindo otimizar o fluxo de trabalho ao possibilitar que o usuário visualize, selecione e compreenda rapidamente a função de cada item disponível. Essa centralização facilita tanto a navegação quanto o entendimento do conjunto como um sistema coeso. Além disso, a \autoref{wilia_2} demonstra a anatomia de cada componente, projetados em diferentes formatos, tamanhos e direções justamente para deixar a ferramenta flexível e com isso, permitir um maior uso por parte dos desenvolvedores e designers. 
+
+\begin{figure}[H]
+    \centering
+    \caption{Trecho da visão geral do Wilia.} % Nome da figura em cima
+    \includegraphics[width=1.0\textwidth]{Figuras/wilia_1.png}
+    \caption*{\small Fonte: do Autor, 2025} % Fonte abaixo da imagem
+    \label{wilia_1}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \caption{Anatomia dos componentes Wilia.}
+    \includegraphics[width=1.0\textwidth]{Figuras/wilia_2.png}
+    \caption*{\small Fonte: do Autor, 2025}
+    \label{wilia_2}
+\end{figure}
+
+  
+Partindo da visão geral, o kit é estruturado em páginas dedicadas a cada categoria de componente (regiões, cabeçalhos, botões, campos de entrada, imagens, hiperlinks, ordem de leitura e ordem de foco). Cada página contém suas respectivas etiquetas de acessibilidade, que funcionam como anotações visuais aplicadas diretamente sobre os protótipos.
+
+O propósito dessas etiquetas é destacar elementos que requerem documentação de acessibilidade específica, como o uso semântico ideal, a estrutura para leitores de tela e as interações esperadas via teclado. Essa abordagem estratégica proporciona um aprendizado contextualizado e incentiva a aplicação de boas práticas desde a fase de concepção visual. A apresentação visual destas páginas, com suas diretrizes, encontra-se no (\autoref{anexoA}) deste trabalho.
+
+Um resultado significativo deste projeto é a concepção do componente Multiespecificação. Trata-se de um componente mestre, construído com variantes no Figma, que encapsula todos os tipos de etiquetas disponíveis no Wilia Kit. Na \autoref{willia-multicomponente} é possível ver sua arquitetura que permite que o usuário, através do painel de propriedades, alterne dinamicamente uma única instância para a especificação desejada. Isso possibilita que um ativo sirva a múltiplos contextos de documentação, representando um avanço em eficiência e usabilidade para o sistema de anotação.
+
+\begin{figure}[H] 
+    \centering
+    \caption{Exemplo de alteração de uma etiqueta Título para uma Região com um componente de multiespecificação} % título em cima
+    \includegraphics[width=0.8\textwidth]{Figuras/willia-multicomponente.png}
+    \caption*{\small Fonte: do Autor, 2025} % fonte abaixo da imagem, sem numeração
+    \label{willia-multicomponente}
+\end{figure}
+
+Cada componente foi acompanhado de uma documentação técnica incorporada ao próprio Figma, aparecendo em sua aba lateral contendo orientações práticas, exemplos de marcação HTML, explicações de comportamento esperados em tecnologias assistivas e referências às diretrizes específicas da WCAG que são atendidas. Essa abordagem pode ser vista na \autoref{willia-exemplo-tecnico} onde trouxemos um entendimento prévio sobre a especificação que pode agilizar o processo de desenvolvimento com acessibilidade.
+
+\begin{figure}[H] 
+    \centering
+    \caption{Exemplo de uma incorporação técnica vista na aba de propriedades de uma etiqueta}
+    \includegraphics[width=0.8\textwidth]{Figuras/Exemplo-implementação.png}
+    \caption*{\small Fonte: do Autor, 2025}
+    \label{willia-exemplo-tecnico}
+\end{figure}
+
+Todas as páginas possuem uma descrição textual indicando o cenário onde o Wilia é utilizado, e o cenário onde o mesmo não é usado, para indicar aos designers e desenvolvedores o ganho em acessibilidade com o uso do mesmo. Demonstrativamente a \autoref{wilia_11} possui os cenários mencionados referentes ao item Região.
+
+\begin{figure}[H] 
+    \centering
+    \caption{Exemplo de descrição de cenários da etiqueta Região} % título em cima
+    \includegraphics[width=0.8\textwidth]{Figuras/wilia_11.png}
+    \caption*{\small Fonte: do Autor, 2025} % fonte abaixo da imagem, sem numeração
+    \label{wilia_11}
+\end{figure}
+
+Com essa estrutura, o Wilia consolida-se como um recurso funcional e dinâmico para equipes multidisciplinares, promovendo uma integração mais fluida entre design e desenvolvimento, além de contribuir para a disseminação de uma cultura de acessibilidade aplicada, prática e tecnicamente fundamentada.
+
+Por fim, para ilustrar sua aplicação prática, a seguir apresenta-se dois exemplos de uso do Wilia na documentação de uma tela acessível, sendo essas a \autoref{documentacao-exemplo-wilia} e \autoref{ordem-navegacao=foco}. A ferramenta permite descrever visualmente e tecnicamente os padrões de acessibilidade necessários, tornando o processo de implementação mais claro e replicável por toda a equipe.
+
+\begin{figure}[H] 
+    \centering
+    \caption{Exemplo de documentação de acessibilidade com o Wilia para semântica} % título em cima
+    \includegraphics[width=0.8\textwidth]{Figuras/documentacao-exemplo-wilia.png}
+    \caption*{\small Fonte: do Autor, 2025} % fonte abaixo da imagem, sem numeração
+    \label{documentacao-exemplo-wilia}
+\end{figure}
+
+\begin{figure}[H] 
+    \centering
+    \caption{Exemplo de documentação de acessibilidade com o Wilia para ordem de leitura e de foco} % título em cima
+    \includegraphics[width=0.5\textwidth]{Figuras/ordem-navegacao=foco.png}
+    \caption*{\small Fonte: do Autor, 2025} % fonte abaixo da imagem, sem numeração
+    \label{ordem-navegacao=foco}
+\end{figure}

@@ -1,0 +1,351 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Modelo trabalho de conclusão de curso
+% Bacharelado em Sistemas de Informação - IFNMG - Campus Salinas
+% Version 2 (1º semestre 2021)
+%
+% Modelo adaptado de:
+% Frits Wenneker (http://www.howtotex.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Texto adaptado de: http://www.fea.usp.br/media/fck/File/Roteiro_para_projeto_pesquisa.pdf
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass[
+	% -- opções da classe memoir --
+	12pt,				% tamanho da fonte
+	%openright,			% capítulos começam em pág ímpar (insere página vazia caso preciso)
+	twoside,			% para impressão em recto e verso. Oposto a oneside
+	a4paper,			% tamanho do papel.
+	% -- opções da classe abntex2 --
+	chapter=TITLE,		% títulos de capítulos convertidos em letras maiúsculas
+	section=TITLE,		% títulos de seções convertidos em letras maiúsculas
+	subsection=TITLE,	% títulos de subseções convertidos em letras maiúsculas
+	subsubsection=TITLE,% títulos de subsubseções convertidos em letras maiúsculas
+	% -- opções do pacote babel --
+	english,			% idioma adicional para hifenização
+	french,				% idioma adicional para hifenização
+	spanish,			% idioma adicional para hifenização
+	brazil,				% o último idioma é o principal do documento
+	]{abntex2}
+
+% ---------------------------------
+% PACOTES
+% ---------------------------------
+%\renewcommand{\thesection}{\arabic{section}}
+\usepackage{lmodern}			% Usa a fonte Latin Modern
+\usepackage[T1]{fontenc}		% Selecao de codigos de fonte.
+\usepackage[utf8]{inputenc}		% Codificacao do documento (conversão automática dos acentos)
+\usepackage{indentfirst}		% Indenta o primeiro parágrafo de cada seção.
+\usepackage{color}				% Controle das cores
+\usepackage{lastpage}
+\usepackage{graphicx}			% Inclusão de gráficos
+\usepackage{microtype} 			% para melhorias de justificação
+\usepackage{multirow}
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage[table]{xcolor}
+\usepackage{multirow}           % Merge rows and columns in tables
+\usepackage{longtable}          % Large tables
+\usepackage{fancyvrb}           % Codes and Outputs commands
+\usepackage{listings}           % Codes and Outputs commands
+\usepackage{pdflscape}
+\usepackage{float}
+\usepackage{subfig}             % Subfigures
+\usepackage{latexsym}           % Extra symbols of Latex
+\usepackage{booktabs}
+\usepackage{enumerate}
+\usepackage{acronym}
+\usepackage[portuguese, ruled, linesnumbered]{algorithm2e}
+\usepackage[noend]{algpseudocode}
+\usepackage{url}
+\let\realurl\url
+\renewcommand{\url}[1]{\realurl{#1}\wlog{URLX #1}}
+\usepackage{lipsum}				% To generate dummy text
+\usepackage{adjustbox}
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage{geometry}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{booktabs}
+\usepackage{caption}
+
+% ---------------------------------
+% Pacotes de citações
+% ---------------------------------
+\usepackage[brazilian,hyperpageref]{backref}% Paginas com as citações na bibl
+\usepackage[alf,bibjustif]{abntex2cite}	% Citações padrão ABNT
+
+% ---------------------------------
+% Configurações do pacote backref
+% Usado sem a opção hyperpageref de backref
+\renewcommand{\backrefpagesname}{Citado na(s) página(s):~}
+% Texto padrão antes do número das páginas
+\renewcommand{\backref}{}
+% Define os textos da citação
+\renewcommand*{\backrefalt}[4]{
+	\ifcase #1 %
+		Nenhuma citação no texto.%
+	\or
+		Citado na página #2.%
+	\else
+		Citado #1 vezes nas páginas #2.%
+	\fi}%
+% ---------------------------------
+% Configurações de aparência do PDF final
+% ---------------------------------
+% alterando o aspecto da cor azul
+\definecolor{blue}{RGB}{41,5,195}
+
+% informações do PDF
+\makeatletter
+\hypersetup{
+     	%pagebackref=true,
+		pdftitle={\@title},
+		pdfauthor={\@author},
+    	pdfsubject={\imprimirpreambulo},
+	    pdfcreator={LaTeX with abnTeX2},
+		pdfkeywords={abnt}{latex}{abntex}{abntex2}{projeto de pesquisa},
+		colorlinks=true,       		% false: boxed links; true: colored links
+    	linkcolor=blue,          	% color of internal links
+    	citecolor=blue,        		% color of links to bibliography
+    	filecolor=magenta,      		% color of file links
+		urlcolor=blue,
+		bookmarksdepth=4
+}
+\makeatother
+% ---------------------------------
+% Espaçamentos entre linhas e parágrafos
+% ---------------------------------
+% O tamanho do parágrafo é dado por:
+\setlength{\parindent}{1.3cm}
+% Controle do espaçamento entre um parágrafo e outro:
+\setlength{\parskip}{0.2cm}  % tente também \onelineskip
+
+
+%-----------------------------------
+% Front pages
+%-----------------------------------
+\titulo{Wilia: Um UI kit de anotações para Documentação de acessibilidade, para leitores de tela, em projetos Web no Figma
+}
+\autor{Eduardo Pereira de Almeida}
+\local{Salinas - Minas Gerais}
+\date{\normalsize\today} % Gera automaticamente a data
+\orientador{Arthur Faria Porto}
+% \coorientador{Coorientador}
+\instituicao{%
+ 	Instituto Federal do Norte de Minas Gerais - Campus Salinas
+ 	\par  
+ 	Bacharelado em Sistemas de Informação
+}
+
+\preambulo{Trabalho de conclusão de curso apresentado ao Curso de Bacharelado em Sistemas de Informação do Instituto Federal do Norte de Minas Gerais, como exigência para obtenção do grau de Bacharel em Sistemas de Informação.}
+
+%-----------------------------------
+% Set the final PDF
+%-----------------------------------
+\definecolor{blue}{RGB}{41,5,195} % setting the blue color
+
+% PDF informations
+\makeatletter                   
+\hypersetup{
+     	%pagebackref=true,
+		pdftitle={\@title}, 
+		pdfauthor={\@author},
+    	pdfsubject={\imprimirpreambulo},
+	    pdfcreator={LaTeX with abnTeX2},
+		pdfkeywords={abnt}{latex}{abntex}{abntex2}{trabalho acadêmico}, 
+		colorlinks=true,        % false: boxed links; true: colored links
+    	linkcolor=blue,         % color of internal links
+    	citecolor=blue,        	% color of links to bibliography
+    	filecolor=magenta,      % color of file links
+		urlcolor=blue,
+		bookmarksdepth=4
+}
+\makeatother
+
+%-----------------------------------
+% Spacing between lines and paragraphs
+%-----------------------------------
+\setlength{\parindent}{1.5cm}   % Set length of indent
+\setlength{\parskip}{0.2cm}     % Set length among the paragraphs 
+
+%Index
+\makeindex
+
+%-----------------------------------
+% Main document
+%-----------------------------------
+\begin{document}
+
+%-----------------------------------
+% Linguagem
+\selectlanguage{brazil} % Texts in pt-br
+\frenchspacing          % Remove obsolete spaces between phrases
+
+%-----------------------------------
+% Elementos pre-textuais
+\pretextual
+
+%-----------------------------------
+% Capa
+\imprimircapa                   
+
+% Folha de rosto
+\imprimirfolhaderosto
+
+\newpage
+
+%-----------------------------------
+% Dedicatória (opcional)
+\begin{dedicatoria}
+    \vspace*{\fill}
+    \centering
+    \noindent
+
+    \textit{À minha mãe, Maria Silvia Pereira de Almeida, \\
+    e às minhas irmãs, Edna Pereira de Almeida e Edilaine Pereira Costa. \\
+    Vocês foram meu pilar e a base que me manteve firme.}
+
+    \vspace{1.5cm}
+
+    \textit{Ao meu pai, Ubaldo de Almeida Costa (in memoriam), \\
+    que infelizmente não pôde ver esta conclusão, \\
+    mas me acompanha no caminho de sucesso que venho trilhando.}
+
+    \vspace{1cm}
+
+    \textit{Costuma-se dizer que a acessibilidade \\
+    só se torna importante quando precisamos dela. \\
+    Dedico este trabalho a todos que precisam dela todos os dias, \\
+    como pessoas cegas, com baixa visão ou qualquer outra deficiência.}
+    
+    \vspace*{\fill}
+\end{dedicatoria}
+
+%-----------------------------------
+% Agradecimentos (opcional)
+\begin{agradecimentos}
+   A conclusão deste trabalho representa o fim de uma longa jornada iniciada em 2018. Um caminho marcado por desafios que foram muito além da academia: enfrentei a pandemia, momentos de ansiedade e angústia, as cobranças da vida, a dor de perder alguém e, em muitas ocasiões, o desânimo e preocupação financeira me fez querer desistir. Por isso, este agradecimento é, antes de tudo, um reconhecimento a quem tornou esta conquista possível.
+
+    Agradeço imensamente ao meu orientador, professor \textbf{Arthur Faria Porto}, por acreditar neste projeto quando eu já estava desistindo do curso. Sua disposição em assumir este TCC, sua motivação, elogios e melhorias à escrita foram fundamentais para que eu mantivesse a vontade. Sua orientação foi essencial para provar a importância de um tema tão relevante e ainda tão pouco tratado.
+    
+    Agradeço aos membros da banca examinadora, professora \textbf{Danielle Miranda Rodrigues} e professor \textbf{Leonardo Humberto Guimaraes Silva}, por aceitarem o convite, pelo tempo dedicado e pelas valiosas contribuições que certamente enriqueceram esta pesquisa.
+    
+    Ao \textbf{Instituto Federal do Norte de Minas Gerais}, pela oportunidade de formação.
+    
+    O pilar mais importante desta trajetória foi, sem dúvida, minha família.
+    
+    À minha mãe, \textbf{Maira Silvia Pereira de Almeida}, que sempre me apoiou, incentivou e se manteve firme por mim, mesmo quando eu não conseguia me manter. Seu apoio incondicional foi minha base para não desistir.
+    
+    Às minhas irmãs, \textbf{Edna Pereira de Almeida} e \textbf{Edilaine Pereira Costa}, por todo o apoio (com um agradecimento especial à Edna por todo o suporte estrutural e cuidados), carinho e até mesmo pelas cobranças, que, à sua maneira, nunca me deixaram esquecer o objetivo final.
+    
+    A todos que, de alguma forma, acreditaram em mim, meu muito obrigado.
+    
+\end{agradecimentos}
+
+%-----------------------------------
+% Epígrafe (opcional)
+\begin{epigrafe}
+    \vspace*{\fill}
+	\begin{flushright}
+		\textit{
+            “O espírito humano precisa prevalecer sobre a tecnologia.”
+            \vspace{0.2cm} \\
+            --- Albert Einstein
+        }
+	\end{flushright}
+\end{epigrafe}
+
+%-----------------------------------
+% Resumo (em português)
+\setlength{\absparsep}{18pt} % set spacing between the paragraphs
+
+\begin{resumo}
+    A acessibilidade digital é fundamental para garantir que pessoas com deficiência possam interagir com interfaces de forma igualitária. Contudo, a ausência de especificações claras e padronizadas de requisitos de acessibilidade, especialmente relacionados a tecnologias assistivas como leitores de tela, representa um grande desafio no processo de design. Este trabalho propõe o desenvolvimento do Wilia, um \textit{UI Kit} para Figma voltado à documentação de requisitos de acessibilidade, com foco na experiência de usuários que utilizam leitores de tela. Baseado nas diretrizes WCAG (\textit{Web Content Accessibility Guidelines}) e WAI-ARIA (\textit{Web Accessibility Initiative - Accessible Rich Internet Applications}), o kit organiza componentes e guias visuais em uma estrutura modular e componentizada, integrando anotações e documentação técnica diretamente no ambiente do Figma. O resultado é uma ferramenta que facilita a comunicação entre equipes multidisciplinares, reduzindo erros de implementação semântica e operacional. Além disso, o \textit{Wilia} tem o potencial de contribuir para a criação de interfaces mais inclusivas, alinhadas às boas práticas internacionais e às políticas nacionais de acessibilidade digital.
+    
+    \vspace{1em}
+    \textit{Palavras-chave: Acessibilidade, UI Kit, Figma, WCAG, tecnologias assistivas, componentes reutilizáveis, atributos semânticos, design inclusivo, código acessível.}
+\end{resumo}
+
+%-----------------------------------
+% Abstract (in English) (opcional)
+\begin{resumo}[Abstract]
+    \begin{otherlanguage*}{english}
+        Digital accessibility is essential to ensure that people with disabilities can interact with digital interfaces on an equal basis. However, the absence of clear and standardized specifications for accessibility requirements, especially related to assistive technologies like screen readers, represents a significant challenge in the design process. This paper proposes the development of Wilia, a \textit{UI Kit} for Figma focused on documenting accessibility requirements, specifically for the screen reader user experience. Based on the WCAG (\textit{Web Content Accessibility Guidelines}) and WAI-ARIA (\textit{Web Accessibility Initiative - Accessible Rich Internet Applications}) guidelines, the kit organizes components and visual guides in a **modular and component-based structure**, integrating annotations and technical documentation directly within the Figma environment. The result is a tool that facilitates communication between multidisciplinary teams, reducing semantic and operational implementation errors. Furthermore, \textit{Wilia} has the potential to contribute to the creation of more inclusive interfaces, aligned with international best practices and national digital accessibility policies.
+
+        \vspace{1em}
+        
+        \textit{Keywords: Accessibility, UI Kit, Figma, WCAG, assistive technologies, reusable components, semantic attributes, inclusive design, accessible code.}
+    \end{otherlanguage*}
+\end{resumo}
+
+%-----------------------------------
+% Lista de figuras
+\pdfbookmark[0]{\listfigurename}{lof}
+\listoffigures*
+\cleardoublepage
+
+%-----------------------------------
+% Lista de tabelas
+\pdfbookmark[0]{\listtablename}{lot}
+\listoftables*
+\cleardoublepage
+
+%-----------------------------------
+% Abreviações (opcional)
+\input{pre-textuais/sigla}
+\cleardoublepage
+
+%-----------------------------------
+% Símbolos (opcional)
+\input{pre-textuais/simbolos}
+\cleardoublepage
+
+%-----------------------------------
+% Sumário
+\pdfbookmark[0]{\contentsname}{toc}
+\tableofcontents*
+\cleardoublepage
+
+
+%-----------------------------------
+% TEXTUAL ELEMENTS
+%-----------------------------------
+\textual
+
+%-----------------------------------
+% Chapters
+\include{Capitulos/cap1_introducao}
+\include{Capitulos/cap2_revisao}
+\include{Capitulos/cap3_metodologia}
+\include{Capitulos/cap4_resultados}
+\include{Capitulos/cap5_conclusao}
+
+%-----------------------------------
+% Finaliza a parte no bookmark do PDF
+% para que se inicie o bookmark na raiz
+% e adiciona espaço de parte no Sumário
+\phantompart
+
+%-----------------------------------
+% Bibliografia
+\bibliography{referencias.bib}
+
+
+%-----------------------------------
+% POST-TEXTUAL ELEMENTS
+%-----------------------------------
+\postextual
+
+% Anexos
+\include{pos-textuais/anexos}
+
+% Apêndice
+%\include{pos-textuais/apendice}
+\usepackage{placeins}
+
+\end{document}
