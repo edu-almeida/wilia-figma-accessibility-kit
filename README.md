@@ -76,7 +76,8 @@ A sabedoria do *Wilia* é construída sobre os padrões que guiam a web acessív
 * Mozilla (MDN Web Docs): Guias práticos de implementação de acessibilidade.
 * Movimento Web para Todos (MWPT): A principal iniciativa sobre o tema no Brasil.
 
-
+<!--
 ## Licença
 
 Este projeto está licenciado sob a **CC BY-NC-SA 4.0** - veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+-->
